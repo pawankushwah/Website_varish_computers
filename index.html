@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="input.css">
+  <title>Varish Computers</title>
+</head>
+<body>
+  <nav class="bg-green-400 w-screen h-10 flex place-content-around items-center">
+    <span class="logo">
+      Varish Computers
+    </span>
+
+    <span class="links">
+      <ul class="flex place-content-center text-white">
+        <li class="px-6 text-lg"><a href="#home">Home</a></li>
+        <li class="px-6 text-lg"><a href="#blog">Blog</a></li>
+        <li class="px-6 text-lg"><a href="#contact">Contact</a></li>
+      </ul>
+    </span>
+
+    <span class="navigationButtons">
+      <button class="">Subscribe Blog</button>
+    </span>
+  </nav>
+
+  <a name="home"  class="home w-screen h-screen flex items-center justify-center">
+    <div class="font-bold text-green-400 text-5xl">
+      Varish Computers
+    </div>
+  </a>
+
+  <a name="blog"  class="blog bg-green-400 w-screen h-screen flex items-center justify-center">
+    <div class="font-bold text-white text-5xl">
+      blog
+    </div>
+  </a>
+
+  <a name="contact"  class="contact w-screen h-screen flex flex-row items-center place-content-around">
+    <div class="contact_pic w-2/5">
+      <img src="src/images/contact.jpg" alt="contact us image">
+    </div>
+    <div class="bg-green-400 p-8 rounded-xl">
+      <div class="font-bold text-white text-5xl py-4 text-center">
+        Contact Us
+      </div>
+      <div class="contactForm relative">
+        <form action="" method="post" class="space-y-2">
+          <div class="name">
+            <!-- <label for="name"><div>Name</div></label> -->
+            <input type="text" placeholder="Your Name" id="name" name="name" class="h-12 w-96 rounded-lg px-4 border-2 border-solid focus:outline-none focus:border-blue-700">
+          </div>
+          <div class="Email">
+            <!-- <label for="email">Email Address</label> -->
+            <input type="email" placeholder="Your Email" id="email" name="email" class="h-12 w-96 rounded-lg px-4 border-2 border-solid focus:outline-none focus:border-blue-700">
+          </div>
+          <div class="phone">
+            <!-- <label for="phone">phone</label> -->
+            <input type="tel" placeholder="Your Phone Number" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="h-12 w-96 rounded-lg px-4 border-2 border-solid focus:outline-none focus:border-blue-700">
+          </div>
+          <div class="Message">
+            <!-- <label for="Message">Message</label> -->
+            <input type="text" placeholder="Describe Your Message" id="Message" name="Message" class="h-12 w-96 rounded-lg px-4 border-2 border-solid focus:outline-none focus:border-blue-700">
+          </div>
+          <div class="submit">
+            <!-- <label for="Message">Message</label> -->
+            <!-- <input type="text" placeholder="Describe Your Message" id="Message" name="Message" class="h-12 w-96 rounded-lg px-4 border-2 border-solid focus:outline-none focus:border-blue-700"> -->
+            <button type="submit" class="bg-orange-400 h-12 w-96 rounded-lg px-4 my-2 focus:outline-none focus:border-blue-700 text-white">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </a>
+
+  <a name="footer"  class="blog bg-gray-200 w-screen h-40 flex items-center justify-center">
+    <div class="font-bold text-black text-5xl">
+      Footer
+    </div>
+  </a>
+</body>
+</html>
