@@ -21,8 +21,54 @@
 </head>
 
 <body class="box-border overflow-x-hidden">
+    <!-- The Modal -->
+    <div id="myModal" class="modal hidden fixed z-20 w-screen h-screen bg-gray-700 bg-black-alpha m-auto">
+
+        <!-- Modal content -->
+        <div class="modal-content text-black bg-white w-1/2 h-fit p-4 m-auto mt-2 overflow-auto rounded-xl">
+            <div class="myModal_close text-2xl text-right p-2 py-0 float-right bg-red-500 rounded-lg text-white">&times;</div>
+                <form action="" method="post" class="space-y-2" autocomplete="off">
+                    <h1 class="text-2xl text-center font-bold p-4">Enter Your Details</h1>
+                    <div class="name">
+                        <input type="text" placeholder="Your Name" id="name" name="name"
+                            class="h-12 w-full rounded-lg px-4 border-2 border-solid focus:outline-none focus:border-blue-700" required>
+                    </div>
+                    <div class="photo">
+                        <label for="photo" class="px-4">Upload your Photo :</label>
+                        <input type="file" id="photo" name="photo"
+                            class="h-fit w-full rounded-lg p-4 border-2 border-solid focus:outline-none focus:border-blue-700" required>
+                    </div>
+                    <div class="signature">
+                        <label for="signature" class="px-4">Upload your signature :</label>
+                        <input type="file" id="signature" name="signature"
+                            class="h-fit w-full rounded-lg p-4 border-2 border-solid focus:outline-none focus:border-blue-700" required>
+                    </div>
+                    <div class="phone">
+                        <input type="tel" placeholder="Your Phone Number" id="phone" name="phone"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            class="h-12 w-full rounded-lg px-4 border-2 border-solid focus:outline-none focus:border-blue-700">
+                    </div>
+                    <div class="Message">
+                        <input type="text" placeholder="Describe Your Message" id="Message" name="Message"
+                            class="h-12 w-full rounded-lg px-4 border-2 border-solid focus:outline-none focus:border-blue-700">
+                    </div>
+                    <div class="submit">
+                        <button type="submit"
+                            class="bg-orange-500 h-12 w-full rounded-lg px-4 my-2 focus:outline-none focus:border-blue-700 text-white">Send</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+
+    <!-- Message and Goto Top Icon -->
+    <a href="chat.html"><i class="fa-regular fa-comment-dots fixed bottom-24 right-8 text-4xl z-20 text-white p-2 rounded-lg bg-blue-600"></i></a>
+    <a href="#top"><i class="fas fa-arrow-up fixed bottom-4 right-8 text-4xl z-20 text-white p-2 rounded-full bg-orange-600"></i></a>
+
+
+
     <!-- navigation bar -->
-    <nav class="navbar bg-green-500 w-screen h-fit py-8 flex items-center place-content-around select-none fixed z-10 transition-all duration-500 border-b-8 border-orange-500">
+    <nav name="top"
+        class="navbar bg-green-500 w-screen h-fit py-8 flex items-center place-content-around select-none fixed z-10 transition-all duration-500 border-b-8 border-orange-500">
         <span class="logo text-purple-800 font-bold text-3xl flex items-center transition-all duration-500">
             <img src="src/images/favicon.png" alt="logo" class="h-16 block px-2">
             <span>Varish Computers</span>
@@ -30,60 +76,87 @@
 
         <span class="links">
             <ul class="flex place-content-center text-white">
-                <a href="#home" class="px-6 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">Home</a>
-                <a href="#pan_service" class="px-6 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">PAN Service</a>
-                <a href="#picture" class="px-6 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">Picture</a>
-                <a href="#owner" class="px-6 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">
-                    Owner Details
-                </a>
+                <a href="#home"
+                    class="px-4 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">Home</a>
+                <a href="#pan_service"
+                    class="px-4 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">PAN
+                    Service</a>
+                <!-- dropdown Menu -->
+                <!-- <a href=""
+                    class="px-4 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600 relative inline-block">
+                    <button>About us</button> -->
+                <!-- <div class="about_us_tab flex flex-col left-2 bg-white text-green-500"> -->
+                <a href="#picture"
+                    class="px-4 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">Picture</a>
+                <a href="#owner"
+                    class="px-4 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">Owner
+                    Details</a>
                 <a href="#contact"
-                    class="px-6 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">Contact</a>
+                    class="px-4 text-xl border-b-2 border-transparent hover:border-b-2 hover:border-b-blue-800 hover:text-blue-600">Contact</a>
+                <!-- </div> -->
+                </a>
             </ul>
         </span>
 
         <span class="navigationButtons text-xl">
-            <button class="bg-blue-500 p-4 rounded-xl text-white font-bold hover:bg-white hover:text-blue-500 transition-all duration-100 ease-linear shadow-md border-b-4 border-blue-700 active:border-b-2">
+            <button
+                class="bg-blue-500 p-2 rounded-xl text-white font-bold hover:bg-white hover:text-blue-500 transition-all duration-100 ease-linear shadow-md border-b-4 border-blue-700 active:border-b-2">
                 Subscribe Blog
             </button>
         </span>
     </nav>
 
     <!-- Home Page -->
-    <a name="home" class="home bg-green-400 w-screen h-screen flex items-center justify-center">
-        <div class="font-bold text-green-400 text-5xl">
-            Varish Computers
+    <a name="home"></a>
+    <div class="home relative bg-green-500 bg-shop-pic w-screen h-screen flex justify-around items-center select-none text-white">
+        <div class="left text-7xl w-1/2 leading-relaxed">
+            Varish Computer & Pan card <br> centre
         </div>
-    </a>
+
+        <div class="right space-y-6 w-4/12">
+        </div>
+    </div>
 
     <!-- pan services page -->
     <a name="pan_service"></a>
-    <div class="pan_service relative w-screen h-screen flex flex-col place-content-center items-center justify-center select-none">
-        pan services
+    <div class="pan_service relative w-screen h-screen flex justify-around items-center select-none">
+        <div class="left">
+            <img src="src/images/pan card.jpg" alt="Pan Card Image" class="rounded-xl drop-shadow-2xl w-auto">
+        </div>
+
+        <div class="right space-y-6 w-4/12">
+            <h1 class="text-4xl font-bold">Do you want to create your PAN Card</h1>
+            <p class="text-xl">We are here to help you</p>
+            <button id="pan_modal" class="p-4 bg-orange-500 rounded-xl">Create your PAN Card</button>
+        </div>
     </div>
 
     <!-- Pictures Page -->
     <a name="picture"></a>
-    <div class="picture relative w-screen h-screen flex flex-col place-content-center items-center justify-center select-none">
-        <div class="slideshowContainer relative w-fit h-fit m-auto max-w-screen-xl font-bold text-black text-5xl">
+    <div
+        class="picture relative w-screen h-screen flex flex-col place-content-center items-center justify-center select-none">
+        <div class="slideshowContainer relative w-1/2 h-2/3 m-auto max-w-screen-xl font-bold text-black text-5xl overflow-hidden rounded-2xl">
             <div class="font-bold text-orange-500 p-4 text-5xl text-center">Pictures</div>
             <!-- slideshow start -->
-            <div class="mySlides fade rounded-lg overflow-hidden">
+            <div class="mySlides fade overflow-hidden">
                 <img src="src/images/slide1.jpg" alt="slide" class="w-fit">
                 <div class="absolute top-0 text-white text-center">Caption</div>
             </div>
-            <div class="mySlides fade rounded-lg overflow-hidden hidden">
+            <div class="mySlides fade overflow-hidden hidden">
                 <img src="src/images/slide2.jpg" alt="slide" class="w-fit">
             </div>
-            <div class="mySlides fade rounded-lg overflow-hidden hidden">
+            <div class="mySlides fade overflow-hidden hidden">
                 <img src="src/images/slide3.jpg" alt="slide" class="w-fit">
             </div>
             <!-- previous and next button -->
-            <a class="prev cursor-pointer absolute top-1/2 p-2 rounded-md text-white hover:bg-gray-600"
+            <a class="prev cursor-pointer absolute top-1/2 p-2 rounded-r-lg text-white hover:bg-gray-600"
                 onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next cursor-pointer absolute top-1/2 p-2 rounded-md right-0 text-white hover:bg-gray-600"
+            <a class="next cursor-pointer absolute top-1/2 p-2 rounded-l-lg right-0 text-white hover:bg-gray-600"
                 onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
             <!-- dots and circles -->
-            <div class="m-auto h-fit text-center">
+            <div class="m-auto h-fit text-center bottom-9">
                 <span
                     class="dot cursor-pointer h-5 w-5 rounded-full m-0 ml-2 mr-2 bg-gray-500 inline-block hover:bg-gray-800"
                     onclick="currentSlide(1)"></span>
@@ -94,7 +167,6 @@
                     class="dot cursor-pointer h-5 w-5 rounded-full m-0 ml-2 mr-2 bg-gray-500 inline-block hover:bg-gray-800"
                     onclick="currentSlide(3)"></span>
             </div>
-        </div>
     </div>
 
     <!-- owner info -->

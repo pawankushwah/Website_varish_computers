@@ -7,7 +7,8 @@ module.exports = {
         'sans': ['comfortaa', 'cambria', 'cambria math',]
       },
       colors: {
-        'fb-blue' : '#1877f2'
+        'fb-blue' : '#1877f2',
+        'black-alpha' : 'rgb(68 51 51 / 41%)'
       },
       keyframes: {
         'typing' : {
@@ -21,6 +22,10 @@ module.exports = {
       },
       animation: {
         'typing' : 'typing 3.5s steps(30, end), blink-caret .5s step-end infinite'
+      },
+
+      backgroundImage: {
+        'shop-pic': "url('src/images/shop picture.jpg')"
       }
     },
     fontFamily: {

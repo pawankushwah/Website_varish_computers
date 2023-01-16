@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dropdown:hover .about_us_tab{
+    display: block;
+}
