@@ -46,7 +46,7 @@ function scrollFunction() {
         document.querySelector(".navigationButtons button").innerText = "Subscribe";
     }
     else if (document.body.scrollTop > 1250 || document.documentElement.scrollTop > 1250) {
-        document.querySelector(".navbar").classList.replace("py-8","py-1");
+        // document.querySelector(".navbar").classList.replace("py-8","py-1");
     }else{
         document.querySelector(".navbar").classList.replace("py-1","py-8");
         document.querySelector(".navbar").classList.replace("border-b-2","border-b-8");
