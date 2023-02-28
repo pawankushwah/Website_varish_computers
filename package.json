@@ -6,6 +6,7 @@
     "vite": "^4.0.4"
   },
   "scripts": {
-    "start" : "vite"
+    "start" : "vite",
+    "build" : "npx tailwindcss -i ./input.css -o ./output.css --watch"
   }
 }
